@@ -9,6 +9,8 @@ ENV DEBIAN_FRONTEND=noninteractive
 ENV LANG=C.UTF-8
 ENV LC_ALL=C.UTF-8
 
+USER root
+
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
         bash \
@@ -22,19 +24,33 @@ RUN apt-get update \
         gzip \
         jq \
         less \
+        libimage-exiftool-perl \
         lsof \
         make \
         nano \
         netcat-openbsd \
         openssh-client \
+        p7zip-full \
+        pandoc \
         pkg-config \
+        poppler-data \
+        poppler-utils \
         procps \
         python3 \
+        python3-bs4 \
+        python3-docx \
+        python3-lxml \
+        python3-openpyxl \
+        python3-pil \
         python3-pip \
+        python3-pypdf \
         python3-venv \
+        qpdf \
         ripgrep \
         rsync \
         tar \
+        tesseract-ocr \
+        tesseract-ocr-eng \
         unzip \
         vim-tiny \
         wget \
@@ -46,5 +62,7 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /workspace
+
+USER root
 
 CMD ["sleep", "infinity"]

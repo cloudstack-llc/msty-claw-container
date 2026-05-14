@@ -9,12 +9,15 @@ docker pull ghcr.io/cloudstack-llc/msty-claw-container:bookworm
 ## What's Included
 
 - Debian Bookworm slim base through `node:22-bookworm-slim`
+- Root as the image default user
 - Node.js 22 and npm
 - Python 3, pip, and venv
 - Git and OpenSSH client
 - Curl, wget, CA certificates, and network diagnostics
 - Build tools for native package installs
 - Common CLI utilities including `jq`, `ripgrep`, `fd`, archive tools, editors, and shells
+- Document and file-reading tools including `pandoc`, Poppler PDF tools (`pdftotext`, `pdfinfo`), `qpdf`, ExifTool, Tesseract OCR, and 7-Zip
+- Python document helpers for PDFs, Word documents, spreadsheets, HTML/XML, and images
 
 ## Extend It
 
